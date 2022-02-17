@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'myMental',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           selectedItemColor: secondaryColor,
@@ -40,8 +41,10 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      initialRoute: SplashPage.routeName,
       getPages: [
-        GetPage(name: LoginPage.routeName, page: () => const LoginPage())
+        GetPage(name: LoginPage.routeName, page: () => const LoginPage()),
+        GetPage(name: SplashPage.routeName, page: () => const SplashPage())
       ],
     );
   }
