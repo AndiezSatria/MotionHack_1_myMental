@@ -3,7 +3,14 @@ import 'package:care_me/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+import 'controller/controller.dart';
+import 'utils/constants/constants.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await firebaseInitialization.then((value) {
+    Get.put(AuthController());
+  });
   runApp(const MyApp());
 }
 
