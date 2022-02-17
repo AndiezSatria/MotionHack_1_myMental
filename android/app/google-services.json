@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "601330307584",
+    "project_id": "mymental-10966",
+    "storage_bucket": "mymental-10966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601330307584:android:d92da74763b6e58a45fee5",
+        "android_client_info": {
+          "package_name": "com.example.care_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601330307584-skccepibd4s1a5edebr62v5nustfbrfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.care_me",
+            "certificate_hash": "2ba7d034305e2f45285d608f2e5962c8a2a4a4f8"
+          }
+        },
+        {
+          "client_id": "601330307584-svgnr0dhv0miikme4pk60fsc0125cq4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyh_XvXHQ4KINF_rokthETPnHpCPzkeDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601330307584-svgnr0dhv0miikme4pk60fsc0125cq4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
