@@ -37,6 +37,7 @@ dependencies:
   firebase_auth: ^3.3.7
   firebase_core: ^1.12.0
   firebase_storage: ^10.2.7
+  flag: ^6.0.0
   flushbar: ^1.10.4
   flutter:
     sdk: flutter
@@ -52,7 +53,7 @@ dependencies:
   http: ^0.13.4
   image_picker: ^0.8.4+9
   intl: ^0.17.0
-  material_design_icons_flutter: ^4.0.5345
+  material_design_icons_flutter: ^5.0.6595
   random_string: ^2.3.1
   rxdart: ^0.27.3
 
