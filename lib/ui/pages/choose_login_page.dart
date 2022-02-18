@@ -10,7 +10,7 @@ class ChooseLoginPage extends StatefulWidget {
 
 class _ChooseLoginPageState extends State<ChooseLoginPage> {
   final _editingController = TextEditingController();
-  bool _isEmailVerified = false;
+  final _controller = Get.put(ChooseLoginController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,9 +145,7 @@ class _ChooseLoginPageState extends State<ChooseLoginPage> {
                       ),
                       child: TextField(
                         onChanged: (text) {
-                          setState(() {
-                            _isEmailVerified = EmailValidator.validate(text);
-                          });
+                          _controller.validateEmail(text);
                         },
                         style: Theme.of(context)
                             .textTheme
@@ -181,17 +179,15 @@ class _ChooseLoginPageState extends State<ChooseLoginPage> {
                   ),
                   SecondaryColorButton(
                     onClick: () {
-                      if (_isEmailVerified) {
+                      if (_controller.isValidate.value) {
                         Get.toNamed(
                           LoginPage.routeName,
-                          arguments: {
-                            'email': _editingController.text.trim()
-                          },
+                          arguments: {'email': _editingController.text.trim()},
                         );
                       } else {
                         Get.snackbar(
                           "Validasi Email",
-                          "Email tidak sesuai format.",
+                          "Email tidak valid.",
                           snackPosition: SnackPosition.BOTTOM,
                           backgroundColor: redColor,
                           colorText: Colors.white,

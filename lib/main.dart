@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'controller/controller.dart';
+import 'data/bindings/bindings.dart';
 import 'utils/constants/constants.dart';
 
 void main() async {
@@ -51,10 +52,25 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashPage.routeName,
       getPages: [
         GetPage(
-            name: ChooseLoginPage.routeName,
-            page: () => const ChooseLoginPage()),
-        GetPage(name: SplashPage.routeName, page: () => const SplashPage()),
-        GetPage(name: LoginPage.routeName, page: () => const LoginPage()),
+          name: ChooseLoginPage.routeName,
+          page: () => const ChooseLoginPage(),
+        ),
+        GetPage(
+          name: SplashPage.routeName,
+          page: () => const SplashPage(),
+        ),
+        GetPage(
+          name: LoginPage.routeName,
+          page: () => const LoginPage(),
+        ),
+        GetPage(
+          name: ForgetPassConfirmationPage.routeName,
+          page: () => const ForgetPassConfirmationPage(),
+        ),
+        GetPage(
+          name: ForgetPasswordPage.routeName,
+          page: () => const ForgetPasswordPage(),
+        ),
       ],
     );
   }
