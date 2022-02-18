@@ -31,13 +31,13 @@ class MainColorButton extends StatelessWidget {
         ],
         color: mainColor,
       ),
-      child: Padding(
-        padding: padding ?? const EdgeInsets.all(16.0),
-        child: Center(
-          child: InkWell(
-            onTap: () {
-              onClick();
-            },
+      child: InkWell(
+        onTap: () {
+          onClick();
+        },
+        child: Padding(
+          padding: padding ?? const EdgeInsets.all(16.0),
+          child: Center(
             child: child,
           ),
         ),

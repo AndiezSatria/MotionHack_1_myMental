@@ -1,3 +1,4 @@
+import 'package:care_me/controller/controller.dart';
 import 'package:care_me/shared/shared.dart';
 import 'package:care_me/ui/widgets/widgets.dart';
 import 'package:email_validator/email_validator.dart';
@@ -13,3 +14,5 @@ part 'choose_login_page.dart';
 part 'landing_page.dart';
 part 'splash_page.dart';
 part 'login_page.dart';
+part 'forget_password_page.dart';
+part 'forget_pass_confirmation_page.dart';

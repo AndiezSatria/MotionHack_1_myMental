@@ -30,13 +30,13 @@ class SecondaryColorButton extends StatelessWidget {
         ],
         color: secondaryColor,
       ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 12.0),
-        child: Center(
-          child: InkWell(
-            onTap: () {
-              onClick();
-            },
+      child: InkWell(
+        onTap: () {
+          onClick();
+        },
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 12.0),
+          child: Center(
             child: Text(
               text,
               style: Theme.of(context).textTheme.headline6?.copyWith(
