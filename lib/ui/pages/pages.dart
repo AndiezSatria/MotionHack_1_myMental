@@ -1,6 +1,8 @@
 import 'package:care_me/controller/controller.dart';
 import 'package:care_me/shared/shared.dart';
 import 'package:care_me/ui/widgets/widgets.dart';
+import 'package:care_me/utils/constants/constants.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flag/flag.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,3 +20,5 @@ part 'login_page.dart';
 part 'forget_password_page.dart';
 part 'forget_pass_confirmation_page.dart';
 part 'register_page.dart';
+part 'main_page.dart';
+part 'home_page.dart';

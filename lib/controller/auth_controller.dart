@@ -28,7 +28,10 @@ class AuthController extends GetxController {
       Get.offAll(() => const LandingPage());
     } else {
       // if the user exists and logged in the the user is navigated to the Home Screen
-      Get.offAll(() => const Placeholder());
+      Get.offAll(
+        () => const MainPage(),
+        binding: MainBinding(),
+      );
     }
   }
 
@@ -39,7 +42,10 @@ class AuthController extends GetxController {
       Get.offAll(() => const LandingPage());
     } else {
       // if the user exists and logged in the the user is navigated to the Home Screen
-      Get.offAll(() => const Placeholder());
+      Get.offAll(
+        () => const MainPage(),
+        binding: MainBinding(),
+      );
     }
   }
 

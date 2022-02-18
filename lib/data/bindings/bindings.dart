@@ -6,3 +6,4 @@ import '../../controller/controller.dart';
 part 'choose_login_binding.dart';
 part 'register_binding.dart';
 part 'login_binding.dart';
+part 'main_binding.dart';
