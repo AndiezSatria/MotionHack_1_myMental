@@ -45,39 +45,17 @@ class LandingPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
+                  MainColorButton(
                     width: 160.0,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(100),
-                      ),
-                      border: Border.all(color: Colors.transparent),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x59ECECEC),
-                          blurRadius: 12.0,
-                          spreadRadius: 6.0,
-                        )
-                      ],
-                      color: mainColor,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Center(
-                        child: InkWell(
-                          onTap: () {
-                            Get.toNamed(LoginPage.routeName);
-                          },
-                          child: Text(
-                            "Lanjutkan",
-                            style:
-                                Theme.of(context).textTheme.bodyText1?.copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                    onClick: () {
+                      Get.toNamed(ChooseLoginPage.routeName);
+                    },
+                    child: Text(
+                      "Lanjutkan",
+                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ),
-                      ),
                     ),
                   ),
                 ],

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: Colors.grey,
         ),
         colorScheme: Theme.of(context).colorScheme.copyWith(
-              primary: Colors.white,
+              primary: mainColor,
               onPrimary: Colors.black,
               secondary: secondaryColor,
             ),
@@ -50,8 +50,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: SplashPage.routeName,
       getPages: [
+        GetPage(
+            name: ChooseLoginPage.routeName,
+            page: () => const ChooseLoginPage()),
+        GetPage(name: SplashPage.routeName, page: () => const SplashPage()),
         GetPage(name: LoginPage.routeName, page: () => const LoginPage()),
-        GetPage(name: SplashPage.routeName, page: () => const SplashPage())
       ],
     );
   }
