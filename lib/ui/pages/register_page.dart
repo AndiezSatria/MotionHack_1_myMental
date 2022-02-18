@@ -1,8 +1,8 @@
 part of 'pages.dart';
 
-class LoginPage extends GetView<LoginController> {
-  LoginPage({Key? key}) : super(key: key);
-  static const routeName = "/login_page";
+class RegisterPage extends GetView<RegisterController> {
+  RegisterPage({Key? key}) : super(key: key);
+  static const routeName = "/register_page";
   final AuthController _authController = Get.find();
 
   @override
@@ -11,7 +11,6 @@ class LoginPage extends GetView<LoginController> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               decoration: const BoxDecoration(
@@ -40,7 +39,7 @@ class LoginPage extends GetView<LoginController> {
                       ),
                       const SizedBox(width: 16.0),
                       Text(
-                        "Masuk ke Akunmu",
+                        "Buat Akun myMental, Yuk!",
                         style: Theme.of(context).textTheme.headline6?.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -75,17 +74,14 @@ class LoginPage extends GetView<LoginController> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(24.0, 36.0, 24.0, 0.0),
+              padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 0.0),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16.0),
-                    child: SvgPicture.asset(
-                      "assets/svg/ic_lock.svg",
-                      height: 24,
-                      width: 24,
-                    ),
+                  SvgPicture.asset(
+                    "assets/svg/ic_identity.svg",
+                    height: 24,
+                    width: 24,
                   ),
                   const SizedBox(width: 18),
                   Expanded(
@@ -94,16 +90,64 @@ class LoginPage extends GetView<LoginController> {
                       children: [
                         Obx(
                           () => TextField(
+                            controller: controller.nameController.value,
+                            cursorColor: Colors.black,
                             onChanged: (text) {
-                              controller.setIsPasswordValid(text);
+                              controller.setIsNameValid(text);
                             },
+                            style: Theme.of(context).textTheme.bodyText1,
+                            decoration: InputDecoration(
+                              errorText: !controller.isNameValid.value
+                                  ? controller.nameMessage.value
+                                  : null,
+                              enabledBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(color: greyColor),
+                              ),
+                              focusedBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(color: mainColor),
+                              ),
+                              hintStyle: Theme.of(context)
+                                  .textTheme
+                                  .bodyText1
+                                  ?.copyWith(color: greyColor),
+                              hintText: "Ketik nama kamu",
+                              labelText: "Ketik nama kamu",
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 0.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    "assets/svg/ic_lock.svg",
+                    height: 24,
+                    width: 24,
+                  ),
+                  const SizedBox(width: 18),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Obx(
+                          () => TextField(
                             controller: controller.passwordController.value,
                             cursorColor: Colors.black,
                             obscureText: !controller.isPasswordVisible.value,
+                            onChanged: (text) {
+                              controller.setIsPasswordValid(text);
+                            },
                             style: Theme.of(context).textTheme.bodyText1,
                             decoration: InputDecoration(
                               errorText: !controller.isPasswordValid.value
-                                  ? controller.message.value
+                                  ? controller.passwordMessage.value
                                   : null,
                               enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(color: greyColor),
@@ -146,32 +190,51 @@ class LoginPage extends GetView<LoginController> {
               onClick: () {
                 controller.setIsPasswordValid(
                     controller.passwordController.value.text.trim());
-                if (controller.isPasswordValid.value) {
-                  _authController.login(Get.arguments['email'] ?? "email",
+                controller.setIsNameValid(
+                    controller.nameController.value.text.trim());
+                if (controller.isPasswordValid.value &&
+                    controller.isNameValid.value) {
+                  _authController.register(Get.arguments['email'] ?? "email",
                       controller.passwordController.value.text.trim());
                 }
               },
-              text: "Masuk",
+              text: "Daftar",
               margin: const EdgeInsets.fromLTRB(24.0, 26.0, 24.0, 0.0),
             ),
             Padding(
               padding: const EdgeInsets.all(24.0),
-              child: GestureDetector(
-                onTap: () {
-                  Get.toNamed(
-                    ForgetPasswordPage.routeName,
-                    arguments: {'email': Get.arguments['email'] ?? "Email mu"},
-                  );
-                },
-                child: Text(
-                  "Lupa kata sandi",
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
-                        color: secondaryColor,
-                        fontWeight: FontWeight.w600,
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  text: "Dengan membuat akun myMental, saya menyetujui ",
+                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        color: const Color(0xFF959595),
                       ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: "Syarat & Ketentuan",
+                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                            color: const Color(0xFF959595),
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                          ),
+                      recognizer: TapGestureRecognizer()..onTap = () {},
+                    ),
+                    const TextSpan(text: " serta "),
+                    TextSpan(
+                      text: "Kebijakan Privasi",
+                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                            color: const Color(0xFF959595),
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                          ),
+                      recognizer: TapGestureRecognizer()..onTap = () {},
+                    ),
+                    const TextSpan(text: " yang berlaku."),
+                  ],
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

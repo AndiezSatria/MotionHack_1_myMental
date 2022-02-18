@@ -6,3 +6,4 @@ import 'package:get/get.dart';
 part 'main_color_button.dart';
 part 'secondary_color_button.dart';
 part 'custom_bg_painter.dart';
+part 'outline_secondary_button.dart';

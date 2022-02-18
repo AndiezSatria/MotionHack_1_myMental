@@ -61,7 +61,8 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: LoginPage.routeName,
-          page: () => const LoginPage(),
+          page: () => LoginPage(),
+          binding: LoginBinding(),
         ),
         GetPage(
           name: ForgetPassConfirmationPage.routeName,
@@ -70,6 +71,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: ForgetPasswordPage.routeName,
           page: () => const ForgetPasswordPage(),
+        ),
+        GetPage(
+          name: RegisterPage.routeName,
+          page: () => RegisterPage(),
+          binding: RegisterBinding(),
         ),
       ],
     );

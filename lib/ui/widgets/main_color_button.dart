@@ -15,26 +15,26 @@ class MainColorButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(
-          Radius.circular(100),
+    return GestureDetector(
+      onTap: () {
+        onClick();
+      },
+      child: Container(
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(100),
+          ),
+          border: Border.all(color: Colors.transparent),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0x59ECECEC),
+              blurRadius: 12.0,
+              spreadRadius: 6.0,
+            )
+          ],
+          color: mainColor,
         ),
-        border: Border.all(color: Colors.transparent),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0x59ECECEC),
-            blurRadius: 12.0,
-            spreadRadius: 6.0,
-          )
-        ],
-        color: mainColor,
-      ),
-      child: InkWell(
-        onTap: () {
-          onClick();
-        },
         child: Padding(
           padding: padding ?? const EdgeInsets.all(16.0),
           child: Center(

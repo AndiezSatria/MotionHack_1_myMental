@@ -11,6 +11,7 @@ class ChooseLoginPage extends StatefulWidget {
 class _ChooseLoginPageState extends State<ChooseLoginPage> {
   final _editingController = TextEditingController();
   final _controller = Get.put(ChooseLoginController());
+  final _authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -177,25 +178,66 @@ class _ChooseLoginPageState extends State<ChooseLoginPage> {
                       ),
                     ),
                   ),
-                  SecondaryColorButton(
-                    onClick: () {
-                      if (_controller.isValidate.value) {
-                        Get.toNamed(
-                          LoginPage.routeName,
-                          arguments: {'email': _editingController.text.trim()},
-                        );
-                      } else {
-                        Get.snackbar(
-                          "Validasi Email",
-                          "Email tidak valid.",
-                          snackPosition: SnackPosition.BOTTOM,
-                          backgroundColor: redColor,
-                          colorText: Colors.white,
-                        );
-                      }
-                    },
-                    text: "Masuk / Daftar",
-                    margin: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 0.0),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlineSecondaryButton(
+                          onClick: () {
+                            if (_controller.isValidate.value) {
+                              Get.toNamed(
+                                RegisterPage.routeName,
+                                arguments: {
+                                  'email': _editingController.text.trim()
+                                },
+                              );
+                            } else {
+                              Get.snackbar(
+                                "Validasi Email",
+                                "Email tidak valid.",
+                                snackPosition: SnackPosition.BOTTOM,
+                                backgroundColor: redColor,
+                                colorText: Colors.white,
+                              );
+                            }
+                          },
+                          child: Text(
+                            "Daftar",
+                            style:
+                                Theme.of(context).textTheme.headline6?.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                          ),
+                          margin:
+                              const EdgeInsets.fromLTRB(24.0, 16.0, 4.0, 0.0),
+                        ),
+                      ),
+                      Expanded(
+                        child: SecondaryColorButton(
+                          onClick: () {
+                            if (_controller.isValidate.value) {
+                              Get.toNamed(
+                                LoginPage.routeName,
+                                arguments: {
+                                  'email': _editingController.text.trim()
+                                },
+                              );
+                            } else {
+                              Get.snackbar(
+                                "Validasi Email",
+                                "Email tidak valid.",
+                                snackPosition: SnackPosition.BOTTOM,
+                                backgroundColor: redColor,
+                                colorText: Colors.white,
+                              );
+                            }
+                          },
+                          text: "Masuk",
+                          margin:
+                              const EdgeInsets.fromLTRB(4.0, 16.0, 24.0, 0.0),
+                        ),
+                      ),
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0),
@@ -227,46 +269,30 @@ class _ChooseLoginPageState extends State<ChooseLoginPage> {
                       ],
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0.0),
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(100),
-                      ),
-                      border: Border.all(color: secondaryColor),
-                    ),
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 12.0),
-                      child: Center(
-                        child: InkWell(
-                          onTap: () {
-                            Get.toNamed(ChooseLoginPage.routeName);
-                          },
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                "assets/images/ic_google.png",
-                                height: 25.0,
-                              ),
-                              const SizedBox(width: 21),
-                              Text(
-                                "Google",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6
-                                    ?.copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                            ],
-                          ),
+                  OutlineSecondaryButton(
+                    onClick: () {
+                      _authController.signInWithGoogle();
+                    },
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          "assets/images/ic_google.png",
+                          height: 25.0,
                         ),
-                      ),
+                        const SizedBox(width: 21),
+                        Text(
+                          "Google",
+                          style:
+                              Theme.of(context).textTheme.headline6?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                        ),
+                      ],
                     ),
+                    margin: const EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 0.0),
                   ),
                 ],
               ),

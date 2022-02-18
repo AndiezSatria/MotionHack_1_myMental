@@ -14,26 +14,26 @@ class SecondaryColorButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: margin,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(
-          Radius.circular(100),
+    return GestureDetector(
+      onTap: () {
+        onClick();
+      },
+      child: Container(
+        margin: margin,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(100),
+          ),
+          border: Border.all(color: Colors.transparent),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black26,
+              blurRadius: 4.0,
+              offset: Offset(0, 4),
+            )
+          ],
+          color: secondaryColor,
         ),
-        border: Border.all(color: Colors.transparent),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black26,
-            blurRadius: 4.0,
-            offset: Offset(0, 4),
-          )
-        ],
-        color: secondaryColor,
-      ),
-      child: InkWell(
-        onTap: () {
-          onClick();
-        },
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 12.0),
           child: Center(

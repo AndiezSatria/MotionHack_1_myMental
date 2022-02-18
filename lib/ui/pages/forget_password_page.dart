@@ -10,7 +10,8 @@ class ForgetPasswordPage extends StatefulWidget {
 
 class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
   final TextEditingController _emailController =
-      TextEditingController(text: "andis.permana12@gmail.com");
+      TextEditingController(text: Get.arguments['email'] ?? "Email");
+  final _authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     final AppBar appbar = AppBar();
@@ -94,8 +95,8 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             ),
           ),
           SecondaryColorButton(
-            onClick: () {
-              Get.toNamed(ForgetPassConfirmationPage.routeName);
+            onClick: () async {
+              _authController.sendEmailResetPassword(_emailController.text);
             },
             text: "Ubah kata sandi",
             margin: const EdgeInsets.fromLTRB(24.0, 35.0, 24.0, 24.0),
