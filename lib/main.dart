@@ -93,6 +93,10 @@ class MyApp extends StatelessWidget {
           page: () => PharmacyPage(),
           binding: ConsultationListBinding(),
         ),
+        GetPage(
+          name: PharmacyPaymentPage.routeName,
+          page: () => PharmacyPaymentPage(),
+        ),
       ],
     );
   }

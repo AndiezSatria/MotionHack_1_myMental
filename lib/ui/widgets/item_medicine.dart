@@ -48,7 +48,7 @@ class ItemMedicine extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
-              medicine.name,
+              "${medicine.name} - ${medicine.amount} tablet",
               style: Theme.of(context).textTheme.bodyText2,
               textAlign: TextAlign.center,
             ),

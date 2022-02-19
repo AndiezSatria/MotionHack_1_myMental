@@ -23,3 +23,5 @@ part 'popover.dart';
 part 'bottom_sheet_payment.dart';
 part 'item_medicine.dart';
 part 'outlined_secondary_button.dart';
+part 'item_medicine_checkout.dart';
+part 'bottom_sheet_pharmacy_payment.dart';

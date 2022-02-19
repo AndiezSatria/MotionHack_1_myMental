@@ -8,10 +8,10 @@ class BottomSheetPayment extends StatefulWidget {
   final PsychologEntity psycholog;
 
   @override
-  BottomSheetPaymentState createState() => BottomSheetPaymentState();
+  _BottomSheetPaymentState createState() => _BottomSheetPaymentState();
 }
 
-class BottomSheetPaymentState extends State<BottomSheetPayment> {
+class _BottomSheetPaymentState extends State<BottomSheetPayment> {
   final TextEditingController _cardController =
       TextEditingController(text: "7326-7281-5302-6482");
   final TextEditingController _expiredController =

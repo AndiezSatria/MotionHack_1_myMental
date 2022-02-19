@@ -78,9 +78,7 @@ class PharmacyPage extends GetView<ConsultationListController> {
           ),
           const SizedBox(height: 8),
           Expanded(
-            child:
-                // Container(),
-                GridView.count(
+            child: GridView.count(
               crossAxisCount: 2,
               crossAxisSpacing: 0,
               mainAxisSpacing: 16,
@@ -88,7 +86,9 @@ class PharmacyPage extends GetView<ConsultationListController> {
               children: dummyMedicine
                   .map((med) => ItemMedicine(
                         medicine: med,
-                        onButtonClick: () {},
+                        onButtonClick: () {
+                          Get.toNamed(PharmacyPaymentPage.routeName);
+                        },
                       ))
                   .toList(),
             ),
