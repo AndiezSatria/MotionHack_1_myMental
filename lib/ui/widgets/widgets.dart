@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../controller/controller.dart';
 import '../pages/pages.dart';
 
 part 'main_color_button.dart';
@@ -25,3 +26,7 @@ part 'item_medicine.dart';
 part 'outlined_secondary_button.dart';
 part 'item_medicine_checkout.dart';
 part 'bottom_sheet_pharmacy_payment.dart';
+part 'my_separator.dart';
+part 'account_settings.dart';
+part 'other_settings.dart';
+part 'dialog_logout.dart';

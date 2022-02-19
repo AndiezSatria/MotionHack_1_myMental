@@ -18,8 +18,8 @@ final RegExp regMoney = RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))');
 List<Widget> listMainPages = [
   HomePage(),
   ActivityPage(),
-  Placeholder(),
-  Placeholder(),
+  const NotificationPage(),
+  ProfilePage(),
 ];
 List<Widget> listSlider = [
   Image.asset("assets/images/slideshow.png"),
