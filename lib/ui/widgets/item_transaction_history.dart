@@ -65,20 +65,21 @@ class ItemTransactionHistory extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              SvgPicture.asset(
+              Image.asset(
                 transaction.paymentMethod == TransactionPaymentMethod.GoPay
-                    ? "assets/svg/logo_gopay.svg"
+                    ? "assets/images/logo_gopay.png"
                     : transaction.paymentMethod ==
                             TransactionPaymentMethod.PayPal
-                        ? "assets/svg/logo_paypal.svg"
+                        ? "assets/images/logo_paypal.png"
                         : transaction.paymentMethod ==
                                 TransactionPaymentMethod.ShopeePay
-                            ? "assets/svg/logo_shopeepay.svg"
+                            ? "assets/images/logo_shopeepay.png"
                             : transaction.paymentMethod ==
                                     TransactionPaymentMethod.CreditCard
-                                ? "assets/svg/logo_mastercard.svg"
-                                : "assets/svg/logo_ovo.svg",
+                                ? "assets/images/logo_mastercard.png"
+                                : "assets/images/logo_ovo.png",
               ),
+              const SizedBox(height: 12),
               Text(
                 "17 Februari 2022",
                 style: Theme.of(context).textTheme.caption?.copyWith(

@@ -13,3 +13,25 @@ class ScheduleEntity {
     required this.date,
   });
 }
+
+class ScheduleListEntity {
+  int id;
+  int psychologId;
+  List<TimeSchedule> listDate;
+
+  ScheduleListEntity({
+    required this.id,
+    required this.psychologId,
+    required this.listDate,
+  });
+}
+
+class TimeSchedule {
+  String date;
+  List<String> time;
+
+  TimeSchedule({
+    required this.date,
+    required this.time,
+  });
+}

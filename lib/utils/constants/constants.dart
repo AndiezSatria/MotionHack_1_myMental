@@ -96,6 +96,7 @@ List<PsychologEntity> dummyPsycholog = [
     alumni: "Universitas Indonesia",
     price: 70000,
     consultationDuration: 45,
+    rating: 93,
   ),
   PsychologEntity(
     id: 2,
@@ -104,6 +105,7 @@ List<PsychologEntity> dummyPsycholog = [
     alumni: "Universitas Gajah Mada",
     price: 120000,
     consultationDuration: 90,
+    rating: 93,
   ),
   PsychologEntity(
     id: 3,
@@ -112,6 +114,7 @@ List<PsychologEntity> dummyPsycholog = [
     alumni: "Universitas Malaya",
     price: 100000,
     consultationDuration: 45,
+    rating: 93,
   ),
   PsychologEntity(
     id: 4,
@@ -120,6 +123,7 @@ List<PsychologEntity> dummyPsycholog = [
     alumni: "Universitas Negeri Sebelas Maret",
     price: 250000,
     consultationDuration: 120,
+    rating: 93,
   ),
   PsychologEntity(
     id: 5,
@@ -128,5 +132,15 @@ List<PsychologEntity> dummyPsycholog = [
     alumni: "Universitas Airlangga",
     price: 150000,
     consultationDuration: 60,
+    rating: 93,
   ),
+];
+
+List<String> scheduleTime = [
+  "09:00",
+  "11:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
 ];

@@ -20,3 +20,4 @@ part 'main_controller.dart';
 part 'home_controller.dart';
 part 'activity_controller.dart';
 part 'consultation_list_controller.dart';
+part 'consultation_detail_controller.dart';

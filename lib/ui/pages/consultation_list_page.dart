@@ -51,10 +51,7 @@ class ConsultationListPage extends GetView<ConsultationListController> {
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 16, 28, 0),
             child: TextField(
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1
-                  ?.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.bodyText1,
               controller: controller.searchController.value,
               cursorColor: greyColor,
               decoration: InputDecoration(

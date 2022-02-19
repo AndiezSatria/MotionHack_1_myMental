@@ -25,16 +25,6 @@ class ActivityPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GestureDetector(
-                    child: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                    onTap: () {
-                      Get.back();
-                    },
-                  ),
-                  const SizedBox(width: 16.0),
                   Text(
                     "Aktivitas",
                     style: Theme.of(context).textTheme.headline6?.copyWith(

@@ -7,6 +7,7 @@ class PsychologEntity {
   String alumni;
   int price;
   int consultationDuration;
+  int rating;
 
   PsychologEntity({
     this.id = 1,
@@ -15,5 +16,6 @@ class PsychologEntity {
     required this.alumni,
     required this.price,
     required this.consultationDuration,
+    required this.rating
   });
 }

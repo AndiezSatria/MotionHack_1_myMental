@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
               onPrimary: Colors.black,
               secondary: secondaryColor,
             ),
+        unselectedWidgetColor: Colors.white,
         textTheme: textTheme,
         appBarTheme: const AppBarTheme(elevation: 0),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -85,6 +86,7 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: ConsultationDetailPage.routeName,
           page: () => ConsultationDetailPage(),
+          binding: ConsultationDetailBinding(),
         ),
       ],
     );

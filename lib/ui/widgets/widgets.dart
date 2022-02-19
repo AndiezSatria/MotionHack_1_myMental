@@ -3,7 +3,11 @@ import 'package:care_me/shared/shared.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+import '../pages/pages.dart';
 
 part 'main_color_button.dart';
 part 'secondary_color_button.dart';
@@ -14,3 +18,7 @@ part 'item_services.dart';
 part 'item_transaction_history.dart';
 part 'item_schedule.dart';
 part 'item_psycholog.dart';
+part 'item_psycholog_detail.dart';
+part 'item_selectable_time.dart';
+part 'popover.dart';
+part 'bottom_sheet_payment.dart';
