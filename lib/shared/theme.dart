@@ -4,6 +4,7 @@ const Color mainColor = Color(0xFF1572A1);
 const Color secondaryColor = Color(0xFFFFC900);
 const Color greyColor = Color(0xFFCECECE);
 const Color redColor = Color(0xFFF90716);
+const Color greenColor = Color(0xFF28DF99);
 
 final TextTheme textTheme = TextTheme(
   headline1: GoogleFonts.assistant(

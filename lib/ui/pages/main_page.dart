@@ -6,7 +6,6 @@ class MainPage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(HomeController());
     return Scaffold(
       body: Stack(
         children: [

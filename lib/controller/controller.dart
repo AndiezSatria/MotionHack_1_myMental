@@ -18,3 +18,4 @@ part 'user_controller.dart';
 part 'login_controller.dart';
 part 'main_controller.dart';
 part 'home_controller.dart';
+part 'activity_controller.dart';

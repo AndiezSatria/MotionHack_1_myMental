@@ -22,3 +22,4 @@ part 'forget_pass_confirmation_page.dart';
 part 'register_page.dart';
 part 'main_page.dart';
 part 'home_page.dart';
+part 'activity_page.dart';

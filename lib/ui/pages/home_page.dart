@@ -21,11 +21,11 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.4 + (62 + 14),
+                  height: MediaQuery.of(context).size.height * 0.35 + (62 + 14),
                   child: Stack(
                     children: [
                       Container(
-                        height: MediaQuery.of(context).size.height * 0.4,
+                        height: MediaQuery.of(context).size.height * 0.35,
                         decoration: const BoxDecoration(
                             color: mainColor,
                             borderRadius: BorderRadius.only(
