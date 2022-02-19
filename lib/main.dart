@@ -77,6 +77,15 @@ class MyApp extends StatelessWidget {
           page: () => RegisterPage(),
           binding: RegisterBinding(),
         ),
+        GetPage(
+          name: ConsultationListPage.routeName,
+          page: () => ConsultationListPage(),
+          binding: ConsultationListBinding(),
+        ),
+        GetPage(
+          name: ConsultationDetailPage.routeName,
+          page: () => ConsultationDetailPage(),
+        ),
       ],
     );
   }

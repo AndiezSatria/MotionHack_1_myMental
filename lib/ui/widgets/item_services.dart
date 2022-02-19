@@ -1,14 +1,14 @@
 part of 'widgets.dart';
 
 class ItemServices extends StatelessWidget {
-  const ItemServices({
-    Key? key,
-    required this.startColor,
-    required this.endColor,
-    required this.illustrationPath,
-    required this.text,
-    required this.onClick
-  }) : super(key: key);
+  const ItemServices(
+      {Key? key,
+      required this.startColor,
+      required this.endColor,
+      required this.illustrationPath,
+      required this.text,
+      required this.onClick})
+      : super(key: key);
   final Color startColor;
   final Color endColor;
   final String illustrationPath;
@@ -55,7 +55,7 @@ class ItemServices extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           SizedBox(
-            width: 80,
+            width: 100,
             child: Text(
               text,
               textAlign: TextAlign.center,

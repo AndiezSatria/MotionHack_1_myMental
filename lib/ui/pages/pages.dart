@@ -13,6 +13,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../model/models.dart';
+
 part 'choose_login_page.dart';
 part 'landing_page.dart';
 part 'splash_page.dart';
@@ -23,3 +25,5 @@ part 'register_page.dart';
 part 'main_page.dart';
 part 'home_page.dart';
 part 'activity_page.dart';
+part 'consultation_list_page.dart';
+part 'consultation_detail_page.dart';

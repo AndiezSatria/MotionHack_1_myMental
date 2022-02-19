@@ -13,3 +13,4 @@ part 'custom_nav_bar_item.dart';
 part 'item_services.dart';
 part 'item_transaction_history.dart';
 part 'item_schedule.dart';
+part 'item_psycholog.dart';

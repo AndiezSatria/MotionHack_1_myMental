@@ -87,3 +87,46 @@ List<ScheduleEntity> dummySchedule = [
     date: "19 Februari 2022",
   ),
 ];
+
+List<PsychologEntity> dummyPsycholog = [
+  PsychologEntity(
+    id: 1,
+    name: "Sarah Anadia Chelsea, M.Psi",
+    experience: 5,
+    alumni: "Universitas Indonesia",
+    price: 70000,
+    consultationDuration: 45,
+  ),
+  PsychologEntity(
+    id: 2,
+    name: "Frederic John Robert, M.Psi",
+    experience: 7,
+    alumni: "Universitas Gajah Mada",
+    price: 120000,
+    consultationDuration: 90,
+  ),
+  PsychologEntity(
+    id: 3,
+    name: "Sarah Anadia Chelsea, M.Psi",
+    experience: 3,
+    alumni: "Universitas Malaya",
+    price: 100000,
+    consultationDuration: 45,
+  ),
+  PsychologEntity(
+    id: 4,
+    name: "Elizabeth Olsen, M.Psi",
+    experience: 9,
+    alumni: "Universitas Negeri Sebelas Maret",
+    price: 250000,
+    consultationDuration: 120,
+  ),
+  PsychologEntity(
+    id: 5,
+    name: "Tom Holland, M.Psi",
+    experience: 10,
+    alumni: "Universitas Airlangga",
+    price: 150000,
+    consultationDuration: 60,
+  ),
+];

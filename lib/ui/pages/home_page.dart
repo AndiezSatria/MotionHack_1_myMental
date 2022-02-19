@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                                 options: CarouselOptions(
                                     autoPlay: false,
                                     pageSnapping: true,
-                                    viewportFraction: 1,
+                                    viewportFraction: 0.75,
                                     height: 142,
                                     enlargeCenterPage: false,
                                     aspectRatio: 2.0,
@@ -235,7 +235,9 @@ class HomePage extends StatelessWidget {
                         endColor: Colors.white,
                         illustrationPath: "assets/svg/il_consultation.svg",
                         text: "Konsultasi Virtual",
-                        onClick: () {},
+                        onClick: () {
+                          Get.toNamed(ConsultationListPage.routeName);
+                        },
                       ),
                       ItemServices(
                         startColor: secondaryColor,
@@ -265,6 +267,13 @@ class HomePage extends StatelessWidget {
                         endColor: Colors.white,
                         illustrationPath: "assets/svg/il_test.svg",
                         text: "Tes MBTI & Psikologi",
+                        onClick: () {},
+                      ),
+                      ItemServices(
+                        startColor: mainColor,
+                        endColor: Colors.white,
+                        illustrationPath: "assets/svg/il_bundle.svg",
+                        text: "Program Paket myMental",
                         onClick: () {},
                       ),
                       ItemServices(
