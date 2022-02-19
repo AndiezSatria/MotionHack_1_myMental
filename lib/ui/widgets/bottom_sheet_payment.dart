@@ -155,7 +155,7 @@ class BottomSheetPaymentState extends State<BottomSheetPayment> {
                           ),
                     ),
                     Text(
-                      "Rp ${widget.psycholog.price}",
+                      "Rp ${widget.psycholog.price.toString().replaceAllMapped(regMoney, (Match match) => '${match[1]}.')}",
                       style: Theme.of(context).textTheme.headline6?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,

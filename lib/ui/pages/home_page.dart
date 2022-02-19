@@ -251,7 +251,9 @@ class HomePage extends StatelessWidget {
                         endColor: Colors.white,
                         illustrationPath: "assets/svg/il_pharmacy.svg",
                         text: "Apotek Kesehatan",
-                        onClick: () {},
+                        onClick: () {
+                          Get.toNamed(PharmacyPage.routeName);
+                        },
                       ),
                     ],
                   ),

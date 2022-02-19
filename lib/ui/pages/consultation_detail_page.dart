@@ -322,7 +322,7 @@ class ConsultationDetailPage extends GetView<ConsultationDetailController> {
                                   ),
                         ),
                         Text(
-                          "Rp ${selectedPsycholog.price}",
+                          "Rp ${selectedPsycholog.price.toString().replaceAllMapped(regMoney, (Match match) => '${match[1]}.')}",
                           style:
                               Theme.of(context).textTheme.headline6?.copyWith(
                                     fontWeight: FontWeight.bold,

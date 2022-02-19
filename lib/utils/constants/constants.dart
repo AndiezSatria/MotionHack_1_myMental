@@ -13,6 +13,7 @@ final Future<FirebaseApp> firebaseInitialization = Firebase.initializeApp();
 FirebaseAuth auth = FirebaseAuth.instance;
 FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 GoogleSignIn googleSign = GoogleSignIn();
+final RegExp regMoney = RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))');
 
 List<Widget> listMainPages = [
   HomePage(),
@@ -143,4 +144,55 @@ List<String> scheduleTime = [
   "18:00",
   "19:00",
   "20:00",
+];
+
+List<MedicineEntity> dummyMedicine = [
+  MedicineEntity(
+    id: 1,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_1.png",
+  ),
+  MedicineEntity(
+    id: 2,
+    name: "Clozaril 25 mg - 100 tablet",
+    price: 350000,
+    imgAsset: "assets/images/med_2.png",
+  ),
+  MedicineEntity(
+    id: 3,
+    name: "Haloperidol lf 1,5 gram",
+    price: 350000,
+    imgAsset: "assets/images/med_3.png",
+  ),
+  MedicineEntity(
+    id: 4,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_1.png",
+  ),
+  MedicineEntity(
+    id: 5,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_2.png",
+  ),
+  MedicineEntity(
+    id: 6,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_3.png",
+  ),
+  MedicineEntity(
+    id: 7,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_1.png",
+  ),
+  MedicineEntity(
+    id: 7,
+    name: "Fridep 50 mg - Antidepresan",
+    price: 350000,
+    imgAsset: "assets/images/med_3.png",
+  ),
 ];

@@ -27,3 +27,4 @@ part 'home_page.dart';
 part 'activity_page.dart';
 part 'consultation_list_page.dart';
 part 'consultation_detail_page.dart';
+part 'pharmacy_list_page.dart';

@@ -107,7 +107,7 @@ class ItemPsycholog extends StatelessWidget {
                               ),
                               const SizedBox(width: 12),
                               Text(
-                                "Rp ${psycholog.price}",
+                                "Rp ${psycholog.price.toString().replaceAllMapped(regMoney, (Match match) => '${match[1]}.')}",
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2
