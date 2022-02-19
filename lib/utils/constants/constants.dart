@@ -29,6 +29,24 @@ List<Widget> listSlider = [
   Image.asset("assets/images/slideshow.png"),
   Image.asset("assets/images/slideshow.png"),
 ];
+List<Widget> listPromo = [
+  Image.asset("assets/images/promo_item.png"),
+  Image.asset("assets/images/promo_item.png"),
+  Image.asset("assets/images/promo_item.png"),
+  Image.asset("assets/images/promo_item.png"),
+];
+List<Widget> listArticle = [
+  Image.asset("assets/images/article_item.png"),
+  Image.asset("assets/images/article_item.png"),
+  Image.asset("assets/images/article_item.png"),
+  Image.asset("assets/images/article_item.png"),
+];
+List<Widget> listBook = [
+  Image.asset("assets/images/book_item.png"),
+  Image.asset("assets/images/book_item.png"),
+  Image.asset("assets/images/book_item.png"),
+  Image.asset("assets/images/book_item.png"),
+];
 List<TransactionEntity> dummyTransactionHistory = [
   TransactionEntity(
     amount: 70000,

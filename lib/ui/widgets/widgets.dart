@@ -1,6 +1,7 @@
 import 'package:care_me/model/models.dart';
 import 'package:care_me/shared/shared.dart';
 import 'package:care_me/utils/constants/constants.dart';
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -30,3 +31,4 @@ part 'my_separator.dart';
 part 'account_settings.dart';
 part 'other_settings.dart';
 part 'dialog_logout.dart';
+part 'item_home_promo.dart';

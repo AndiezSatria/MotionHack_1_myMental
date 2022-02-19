@@ -288,6 +288,22 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
+                ItemHomePromo(
+                  items: listPromo,
+                  onMoreClick: () {},
+                  title: "Promo Hemat",
+                ),
+                ItemHomePromo(
+                  items: listArticle,
+                  onMoreClick: () {},
+                  title: "Artikel untukmu",
+                  type: 2,
+                ),
+                ItemHomePromo(
+                  items: listBook,
+                  onMoreClick: () {},
+                  title: "Rekomendasi buku",
+                ),
                 const SizedBox(height: 110),
               ],
             ),
