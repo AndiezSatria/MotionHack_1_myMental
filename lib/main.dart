@@ -1,6 +1,7 @@
 import 'package:care_me/shared/shared.dart';
 import 'package:care_me/ui/pages/pages.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'controller/controller.dart';
@@ -12,7 +13,8 @@ void main() async {
   await firebaseInitialization.then((value) {
     Get.put(AuthController());
   });
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -80,7 +82,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: ConsultationListPage.routeName,
-          page: () => ConsultationListPage(),
+          page: () => const ConsultationListPage(),
           binding: ConsultationListBinding(),
         ),
         GetPage(
@@ -90,12 +92,17 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: PharmacyPage.routeName,
-          page: () => PharmacyPage(),
+          page: () => const PharmacyPage(),
           binding: ConsultationListBinding(),
         ),
         GetPage(
           name: PharmacyPaymentPage.routeName,
-          page: () => PharmacyPaymentPage(),
+          page: () => const PharmacyPaymentPage(),
+        ),
+        GetPage(
+          name: ChatPage.routeName,
+          page: () => const ChatPage(),
+          binding: ConsultationListBinding(),
         ),
       ],
     );

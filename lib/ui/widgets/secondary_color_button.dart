@@ -100,3 +100,42 @@ class SecondaryColorSmallButton extends StatelessWidget {
     );
   }
 }
+
+class SecondaryColorRoundedButton extends StatelessWidget {
+  final double? width;
+  final Function onClick;
+  final Widget child;
+  final EdgeInsetsGeometry? padding;
+  const SecondaryColorRoundedButton({
+    Key? key,
+    this.width,
+    this.padding,
+    required this.onClick,
+    required this.child,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        onClick();
+      },
+      child: Container(
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(10),
+          ),
+          border: Border.all(color: Colors.transparent),
+          color: secondaryColor,
+        ),
+        child: Padding(
+          padding: padding ?? const EdgeInsets.all(16.0),
+          child: Center(
+            child: child,
+          ),
+        ),
+      ),
+    );
+  }
+}

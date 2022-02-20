@@ -110,6 +110,5 @@ class ItemPsychologDetail extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

@@ -10,7 +10,7 @@ class ForgetPassConfirmationPage extends StatelessWidget {
     return Scaffold(
       body: CustomPaint(
         painter: CustomBGPainter(),
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: SafeArea(

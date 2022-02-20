@@ -90,6 +90,7 @@ class _BottomSheetPaymentState extends State<BottomSheetPayment> {
                   controller: _cvvController,
                   cursorColor: Colors.black,
                   enabled: false,
+                  obscureText: true,
                   style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         fontWeight: FontWeight.w600,
                         color: Colors.white,

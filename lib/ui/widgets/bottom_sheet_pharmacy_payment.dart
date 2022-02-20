@@ -114,6 +114,7 @@ class _BottomSheetPharmacyPaymentState
                         const SizedBox(width: 8.0),
                         Container(
                           width: 7,
+                          height: 7,
                           decoration: const BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle,

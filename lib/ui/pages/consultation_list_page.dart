@@ -37,7 +37,7 @@ class ConsultationListPage extends GetView<ConsultationListController> {
                     ),
                     const SizedBox(width: 16.0),
                     Text(
-                      "Kunsultasi Virtual",
+                      "Konsultasi Virtual",
                       style: Theme.of(context).textTheme.headline6?.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

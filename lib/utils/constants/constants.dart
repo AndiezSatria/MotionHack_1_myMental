@@ -19,7 +19,7 @@ List<Widget> listMainPages = [
   HomePage(),
   ActivityPage(),
   const NotificationPage(),
-  ProfilePage(),
+  const ProfilePage(),
 ];
 List<Widget> listSlider = [
   Image.asset("assets/images/slideshow.png"),
@@ -220,5 +220,24 @@ List<MedicineEntity> dummyMedicine = [
     price: 350000,
     imgAsset: "assets/images/med_3.png",
     amount: 10,
+  ),
+];
+
+List<ChatEntity> dummyChat = [
+  ChatEntity(
+    body:
+        "Selamat malam. Saya Sarah Anadia Chelsea \nApa yang bisa saya bantu ?",
+    seen: "18:53",
+    chatType: ChatType.Received,
+  ),
+  ChatEntity(
+    body: "Selamat malam kak \nBisa saya call sekarang ?",
+    seen: "18:53",
+    chatType: ChatType.Sent,
+  ),
+  ChatEntity(
+    body: "Boleh, dengan senang hati !",
+    seen: "18:53",
+    chatType: ChatType.Received,
   ),
 ];

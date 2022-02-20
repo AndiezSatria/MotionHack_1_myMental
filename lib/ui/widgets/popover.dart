@@ -23,7 +23,7 @@ class Popover extends StatelessWidget {
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: [_buildHandle(context), if (child != null) child],
+        children: [_buildHandle(context), child],
       ),
     );
   }
@@ -37,9 +37,9 @@ class Popover extends StatelessWidget {
         ),
         child: Container(
           height: 5.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
-            borderRadius: const BorderRadius.all(Radius.circular(2.5)),
+            borderRadius: BorderRadius.all(Radius.circular(2.5)),
           ),
         ),
       ),

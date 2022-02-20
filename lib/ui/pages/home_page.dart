@@ -147,7 +147,9 @@ class HomePage extends StatelessWidget {
                                       ),
                                       const SizedBox(width: 6),
                                       IconButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Get.toNamed(ChatPage.routeName);
+                                        },
                                         icon: const Icon(
                                           Icons.more_vert,
                                           color: Colors.white,
